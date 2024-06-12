@@ -330,7 +330,7 @@ class PolledSyncRunner(
             logger.error("Error requesting Plaid transactions. Request: $request; ")
             if (allowItemToFail) {
                 logger.warn("Querying transactions for access token $accessToken failed, allowing failure and continuing on to the next access token")
-                emptyPlaidResponse()
+                return emptyPlaidResponse()
             } else throw cre
         }
     }
