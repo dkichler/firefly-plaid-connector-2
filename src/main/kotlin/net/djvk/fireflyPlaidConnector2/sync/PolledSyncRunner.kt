@@ -40,7 +40,7 @@ class PolledSyncRunner(
     private val cursorFileDirectoryPath: String,
     @Value("\${fireflyPlaidConnector2.plaid.batchSize}")
     private val plaidBatchSize: Int,
-    @Value("false")
+    @Value("\${fireflyPlaidConnector2.polled.allowItemToFail}")
     private val allowItemToFail: Boolean,
 
     private val plaidApiWrapper: PlaidApiWrapper,
